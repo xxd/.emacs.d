@@ -1,0 +1,44 @@
+;;; init.el --- Where all the magic begins
+;;
+;; Part of the Emacs Starter Kit
+;;
+;; This is the first thing to get loaded.
+;;
+
+(setq dotfiles-dir (file-name-directory (or load-file-name (buffer-file-name))))
+
+(add-to-list 'load-path (expand-file-name
+                         "lisp" (expand-file-name
+                                 "org" (expand-file-name
+                                        "src" dotfiles-dir))))
+
+;;git-emacs
+;;(add-to-list 'load-path "/Users/xuexiaodong79/.emacs.d/git-emacs")
+;;(require 'git-emacs)
+
+;; Load up Org Mode and Babel
+(require 'org-install)
+
+;; load up the main file
+(org-babel-load-file (expand-file-name "starter-kit.org" dotfiles-dir))
+
+;;; init.el ends here
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; START: Ruby / Rails setup
+
+;; Interactively Do Things (highly recommended, but not strictly required)
+;;(require 'ido)
+;;(ido-mode t)
+
+;; Rinari
+;;(setq load-path (cons (expand-file-name "~/.emacs.d/rinari") load-path))
+;;(add-to-list 'load-path "~/.emacs/rinari")
+;;(require 'rinari)
+
+;; rails reloaded plugin
+(setq load-path (cons (expand-file-name "~/.emacs.d/rails-reloaded") load-path))
+(require 'rails-autoload)
+
+;; END: Ruby / Rails setup
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
