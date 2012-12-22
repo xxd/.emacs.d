@@ -11,34 +11,21 @@
                          "lisp" (expand-file-name
                                  "org" (expand-file-name
                                         "src" dotfiles-dir))))
-
-;;git-emacs
-;;(add-to-list 'load-path "/Users/xuexiaodong79/.emacs.d/git-emacs")
-;;(require 'git-emacs)
-
 ;; Load up Org Mode and Babel
 (require 'org-install)
 
 ;; load up the main file
 (org-babel-load-file (expand-file-name "starter-kit.org" dotfiles-dir))
 
+;;textmate-mode
+(add-to-list 'load-path "~/.emacs.d/vendor/textmate.el")
+(require 'textmate)
+(textmate-mode)
+
+;;git-emacs
+(add-to-list 'load-path "~/.emacs.d/git-emacs/")
+(require 'git-emacs)
+
+(set-face-attribute 'default nil :height 130)
 ;;; init.el ends here
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; START: Ruby / Rails setup
-
-;; Interactively Do Things (highly recommended, but not strictly required)
-;;(require 'ido)
-;;(ido-mode t)
-
-;; Rinari
-;;(setq load-path (cons (expand-file-name "~/.emacs.d/rinari") load-path))
-;;(add-to-list 'load-path "~/.emacs/rinari")
-;;(require 'rinari)
-
-;; rails reloaded plugin
-(setq load-path (cons (expand-file-name "~/.emacs.d/rails-reloaded") load-path))
-(require 'rails-autoload)
-
-;; END: Ruby / Rails setup
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

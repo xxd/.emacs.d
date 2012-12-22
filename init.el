@@ -17,4 +17,16 @@
 ;; load up the main file
 (org-babel-load-file (expand-file-name "starter-kit.org" dotfiles-dir))
 
+;;textmate-mode
+(add-to-list 'load-path "~/.emacs.d/vendor/textmate.el")
+(require 'textmate)
+(textmate-mode)
+
+;;git-emacs
+(add-to-list 'load-path "~/.emacs.d/git-emacs/")
+(require 'git-emacs)
+
+;;font size
+(set-face-attribute 'default nil :height 130)
 ;;; init.el ends here
+
