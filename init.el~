@@ -26,6 +26,13 @@
 (add-to-list 'load-path "~/.emacs.d/git-emacs/")
 (require 'git-emacs)
 
+;;font size
 (set-face-attribute 'default nil :height 130)
+
+;;replace the auto-save files
+(setq backup-directory-alist `(("." . "~/.emacs.d/emacs_backup")))
+
+;;Org Mode Setting
+(setq org-startup-indented t)
 ;;; init.el ends here
 

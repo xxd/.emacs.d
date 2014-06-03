@@ -1,0 +1,12 @@
+* 需求
+文件以及其他org的链接和跳转
+
+* Redis on Rails相关Gem
+** redis驱动 https://github.com/redis/redis-rb
+  config/initializers/redis.rb
+  $redis = Redis.new(:host => '10.0.1.205', :port => 6000)
+
+** nest https://github.com/soveran/nest
+
+** 使用方法 http://jimneath.org/2011/03/24/using-redis-with-ruby-on-rails.html
+
