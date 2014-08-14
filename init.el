@@ -77,7 +77,9 @@
 (require 'color-theme)
 (setq color-theme-is-global t)
 (color-theme-initialize)
-(color-theme-arjen)
+;;(color-theme-arjen)
+(load-file "~/.emacs.d/color-theme-railscasts.el")
+(color-theme-railscasts)
 
 ;;newlisp
 (require 'newlisp-mode)
